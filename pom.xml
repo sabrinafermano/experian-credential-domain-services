@@ -18,6 +18,8 @@
 		<java.version>11</java.version>
 		<swagger.codegen.version>2.2.3</swagger.codegen.version>
 		<swagger.version>1.5.4</swagger.version>
+		<junit.version>4.12</junit.version>
+		<mockito.core.version>2.10.0</mockito.core.version>
 	</properties>
 
 	<dependencies>
@@ -38,6 +40,33 @@
 			</exclusions>
 		</dependency>
 		
+		<!-- Tests: Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+			<version>${junit.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hamcrest</groupId>
+					<artifactId>hamcrest-core</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- Tests: Mockito -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.core.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 		
 		<!-- Swagger -->
 		<dependency>
